@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { RouterModule,Routes } from "@angular/router";
 
 //Rutas
 import { APP_ROUTING } from "./app.routes";
@@ -11,6 +12,7 @@ import { HomeComponent } from './componets/home/home.component';
 import { HeroesComponent } from './componets/heroes/heroes.component';
 import { AboutComponent } from './componets/about/about.component';
 import { HeroesService } from "./services/heroes.services.service";
+import { HeroeComponent } from './componets/heroe/heroe.component';
 
 @NgModule({
   declarations: [
@@ -18,10 +20,12 @@ import { HeroesService } from "./services/heroes.services.service";
     NavbarComponent,
     HomeComponent,
     HeroesComponent,
-    AboutComponent
+    AboutComponent,
+    HeroeComponent
   ],
   imports: [
     BrowserModule,
+    RouterModule,
     APP_ROUTING
   ],
   providers: [HeroesService],
