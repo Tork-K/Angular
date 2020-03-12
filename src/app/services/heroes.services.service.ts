@@ -61,6 +61,18 @@ export class HeroesService {
   constructor() {
   }
 
+  onBuscarHeroe(valor:string){
+    let retorno:Heroe[]=[];
+    valor = valor.toLocaleLowerCase();
+    for (let hero of this.heroes) {
+      let nombre:string = hero.nombre.toLocaleLowerCase();
+      if(nombre === valor){
+        retorno.push(hero);
+      }
+    }
+    return retorno;
+  }
+
   getHeroes() {
     return this.heroes;
   }
